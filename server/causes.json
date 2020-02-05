@@ -33,12 +33,12 @@
       "imageUrl": "https://cdn.civitatis.com/polinesia-francesa/bora-bora/galeria/snorkel-tiburones.jpg"
     },
     {
-      "id": 5,
       "cause": "Trip to Palma de Mallorca",
       "description": "Occaecat aliquip dolore et mollit adipisicing. Culpa ipsum elit anim adipisicing. Mollit commodo in quis aute aute dolore ex ex amet ad eu ut Lorem. Sunt labore officia non laborum magna ipsum deserunt. Ut magna Lorem cupidatat esse pariatur. Fugiat est tempor exercitation eiusmod non. Minim labore ea occaecat reprehenderit ipsum.",
       "neededAmount": 7.272,
-      "collectedAmount": 1.8077,
-      "imageUrl": "http://verbanoviaggi.com/wp-content/uploads/2016/01/palma-de-mallorca-cathedral.jpg"
+      "imageUrl": "http://verbanoviaggi.com/wp-content/uploads/2016/01/palma-de-mallorca-cathedral.jpg",
+      "collectedAmount": 9.8077,
+      "id": 5
     },
     {
       "id": 6,

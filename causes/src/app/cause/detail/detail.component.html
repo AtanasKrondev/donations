@@ -1,4 +1,4 @@
-<div class="col-md-8">
+
     <div *ngIf="selectedCause">
         <div class="row">
             <div class="col-xs-12">
@@ -40,7 +40,9 @@
         </div>
         <hr>
     </div>
-    <div *ngIf="!selectedCause">
+    <div *ngIf="!selectedCause && !isRouteComponent">
         <div class="col-xs-12 cause-description">Let's select a cause!</div>
     </div>
-</div>
+    <div *ngIf="!selectedCause && isRouteComponent">
+        <div class="col-xs-12 cause-description">Cause doesn't exist!</div>
+    </div>
