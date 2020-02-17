@@ -17,9 +17,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleLogin(email: string, password: string) {
-    this.userService.login(email, password);
-    this.router.navigate(['']);
+  handleLogin({ email, password }: { email: string, password: string }) {
+    this.userService.login(email, password).subscribe(() => {
+      this.router.navigate(['']);
+    }, console.error);
   }
-
 }

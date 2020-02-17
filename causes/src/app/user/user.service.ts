@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -13,18 +12,20 @@ export class UserService {
     return !!this.currentUser;
   }
 
-  constructor() {
+  constructor(private http: HttpClient) {
     const currentUser = localStorage.getItem('current-user');
     this.currentUser = currentUser ? JSON.parse(currentUser) : null;
   }
 
   login(email: string, password: string) {
-    localStorage.setItem('current-user', JSON.stringify({ email, password }));
-    this.currentUser = { email, password };
+    return this.http.post('http://localhost:9999/api/user/login', { email, password }, { withCredentials: true })
+  }
+
+  register(email: string, password: string) {
+    return this.http.post('http://localhost:9999/api/user/register', { email, password }, { withCredentials: true })
   }
 
   logout() {
-    this.currentUser = null;
-    localStorage.removeItem('current-user');
+    return this.http.post('http://localhost:9999/api/user/logout', {}, { withCredentials: true })
   }
 }
